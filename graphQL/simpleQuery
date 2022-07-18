@@ -1,5 +1,5 @@
 query{
-  repository(owner:"nkalexiou", name:"suricatajs"){
+  repository(owner:"your user", name:"the repo"){
      description
   }
 }
