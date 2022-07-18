@@ -1,0 +1,33 @@
+query{
+  repository(owner:"your user", name:"the repo"){
+    name
+    description
+    vulnerabilityAlerts(first:4,after:null){
+      totalCount
+      edges{
+        node{
+          securityVulnerability{
+            package{
+              name
+              ecosystem
+            }
+            severity
+            vulnerableVersionRange
+          }
+        }
+      }
+      pageInfo{
+        endCursor
+        hasNextPage
+      }
+    }
+    
+    languages(first:4) {
+      edges{
+        node{
+          name
+        }
+      }
+    }
+  }
+}
