@@ -1,0 +1,13 @@
+query{
+  repository(owner:"your user", name:"the repo"){
+    issues(filterBy: {labels: ["security"]}, first:100){
+      totalCount
+      edges{
+        node{
+          title
+          state
+        }
+      }
+    }
+  }
+}
