@@ -1,0 +1,17 @@
+query{
+  repository(owner:"nkalexiou", name:"suricatajs"){
+    name
+    description
+    vulnerabilityAlerts{
+      totalCount
+    }
+    
+    languages(first:4) {
+      edges{
+        node{
+          name
+        }
+      }
+    }
+  }
+}
