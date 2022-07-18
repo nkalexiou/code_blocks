@@ -1,0 +1,19 @@
+query myOrgRepos($queryString: String!) {
+  search(query: $queryString, type: REPOSITORY, first: 10) {
+    repositoryCount
+    edges {
+      node {
+        ... on Repository {
+          name
+          vulnerabilityAlerts{
+            totalCount
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+  "queryString": "org:your user"
+}
