@@ -1,0 +1,9 @@
+query{
+  repository(owner:"your user", name:"the repo name"){
+    name
+    description
+    vulnerabilityAlerts{
+      totalCount
+    }
+  }
+}
